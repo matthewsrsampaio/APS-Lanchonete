@@ -17,11 +17,11 @@ public class Hamburguer extends Comida {
         this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(19.5);
         return
-                "Seu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
-                "Tipo de comida: " + this.getTipo() + " \n" +
-                "Tipo de hamburguer: " + this.getTipoHamburguer() + " \n" +
-                "Comer fora: " + this.getComerFora() + " \n" +
-                "Preco: R$" + this.getPreco();
+                "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de hamburguer: " + this.getTipoHamburguer() +
+                "\nComer fora: " + this.getComerFora() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String burger2() {
@@ -31,11 +31,11 @@ public class Hamburguer extends Comida {
         this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(15.2);
         return
-                "Seu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
-                "Tipo de comida: " + this.getTipo() + " \n" +
-                "Tipo de hamburguer: " + this.getTipoHamburguer() + " \n" +
-                "Comer fora: " + this.getComerFora() + " \n" +
-                "Preco: R$" + this.getPreco();
+                "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de hamburguer: " + this.getTipoHamburguer() +
+                "\nComer fora: " + this.getComerFora() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String burger3() {
@@ -45,11 +45,11 @@ public class Hamburguer extends Comida {
         this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(22.7);
         return
-                "Seu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
-                "Tipo de comida: " + this.getTipo() + " \n" +
-                "Tipo de hamburguer: " + this.getTipoHamburguer() + " \n" +
-                "Comer fora: " + this.getComerFora() + " \n" +
-                "Preco: R$" + this.getPreco();
+                "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de hamburguer: " + this.getTipoHamburguer() +
+                "\nComer fora: " + this.getComerFora() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     @Override

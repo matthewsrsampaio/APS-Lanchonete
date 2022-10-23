@@ -12,10 +12,10 @@ public class Pizza extends Comida implements comum{
         this.setSabor("Barra 8 pieces");
         this.setPreco(30.5);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de pizza: " + this.getSabor() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de pizza: " + this.getSabor() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String pizza2() {
@@ -23,10 +23,10 @@ public class Pizza extends Comida implements comum{
         this.setSabor("Barbas 10 Grand");
         this.setPreco(25.2);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de pizza: " + this.getSabor() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de pizza: " + this.getSabor() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String pizza3() {
@@ -34,10 +34,10 @@ public class Pizza extends Comida implements comum{
         this.setSabor("The Old Village's 16 Secrets");
         this.setPreco(45.99);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de pizza: " + this.getSabor() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de pizza: " + this.getSabor() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     @Override
@@ -47,25 +47,16 @@ public class Pizza extends Comida implements comum{
 
     @Override
     public String emitirIngredientes_1() {
-        return
-                "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n+ Ficha de ingredientes padrão: carne de javali, massa crocante, queijo sensação, tomate e cebola +" +
-                        "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: carne de javali, massa crocante, queijo sensação, tomate e cebola";
     }
 
     @Override
     public String emitirIngredientes_2() {
-        return
-                "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n+ Ficha de ingredientes padrão: carne de bode desfiada, tripa crocante de bode, cogumelos neozelandeses cabreocráricos e hipinotizantes +" +
-                        "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: carne de bode desfiada, tripa crocante de bode, cogumelos neozelandeses cabreocráricos e hipinotizantes";
     }
 
     @Override
     public String emitirIngredientes_3() {
-        return
-                "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n+ Ficha de ingredientes padrão: queijo muçarela 1000 grau, alfafa, carne de carangueijo desfiada, triglicerídeos hipoglicemicos +" +
-                        "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: queijo muçarela 1000 grau, alfafa, carne de carangueijo desfiada, triglicerídeos hipoglicemicos";
     }
 }
