@@ -7,7 +7,6 @@ public class Comida implements comum{
     private String tipo;
     private String observacao;
     private String endereco;
-    private String tipoLanche;
 
     public String getEndereco() { return endereco; }
 

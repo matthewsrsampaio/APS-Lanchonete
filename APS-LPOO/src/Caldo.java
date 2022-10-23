@@ -14,10 +14,10 @@ public class Caldo extends Comida implements comum{
         this.setTipoCaldo("Best of Barra");
         this.setPreco(9.5);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de caldo: " + this.getTipoCaldo() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de caldo: " + this.getTipoCaldo() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String caldo2() {
@@ -25,10 +25,10 @@ public class Caldo extends Comida implements comum{
         this.setTipoCaldo("M. Castelo's Super");
         this.setPreco(25.2);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de caldo: " + this.getTipoCaldo() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de caldo: " + this.getTipoCaldo() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     public String caldo3() {
@@ -36,10 +36,10 @@ public class Caldo extends Comida implements comum{
         this.setTipoCaldo("Old Village's best");
         this.setPreco(10);
         return
-                "Pedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
-                        "Tipo de comida: " + this.getTipo() + " \n" +
-                        "Tipo de caldo: " + this.getTipoCaldo() + " \n" +
-                        "Preco: R$" + this.getPreco();
+                "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
+                "\nTipo de comida: " + this.getTipo() +
+                "\nTipo de caldo: " + this.getTipoCaldo() +
+                "\nPreco: R$" + this.getPreco();
     }
 
     @Override
@@ -49,25 +49,16 @@ public class Caldo extends Comida implements comum{
 
     @Override
     public String emitirIngredientes_1() {
-        return
-                "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n* Ficha de ingredientes padrão: carne, abobrinha, coentro, tomate e cebola +" +
-                        "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: carne, abobrinha, coentro, tomate e cebola";
     }
 
     @Override
     public String emitirIngredientes_2() {
-        return
-                "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n+ Ficha de ingredientes padrão: bode, tripas de bode e coleslaw +" +
-                        "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: bode, tripas de bode e coleslaw";
     }
 
     @Override
     public String emitirIngredientes_3() {
-        return
-                "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
-                        "\n+ Ficha de ingredientes padrão: ginsen, alfafa, carne de carangueijo e triglicerídeos +" +
-                        "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++";
+        return "\nFicha de ingredientes padrão: ginsen, alfafa, carne de carangueijo e triglicerídeos";
     }
 }
