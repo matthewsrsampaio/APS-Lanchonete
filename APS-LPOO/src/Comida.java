@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Classe Comida implementa a Interface "comum"
 public class Comida implements comum{
     private boolean takeAway = true;
     private double preco;
@@ -8,6 +9,7 @@ public class Comida implements comum{
     private String observacao;
     private String endereco;
 
+    //Getters and Setters
     public String getEndereco() { return endereco; }
 
     public void setEndereco(String endereco) { this.endereco = endereco; }
@@ -43,6 +45,7 @@ public class Comida implements comum{
     public void setTipo(String tipo) { this.tipo = tipo; }
 
     // Pratos da casa.
+    //Instanciado aqui para que se possa usar os métodos de Comida com o objeto.
     public String burger1_() {
         Hamburguer burge1 = new Hamburguer();
         return burge1.burger1();
@@ -80,6 +83,8 @@ public class Comida implements comum{
         return pizza3.pizza3();
     }
 
+    //extraInfo() coleta informações sobre o pedido como local do consumo,
+    // endereço do cliente e observação sobre o pedido
     @Override
     public String extraInfo() {
         Scanner scan = new Scanner(System.in);
@@ -106,6 +111,8 @@ public class Comida implements comum{
         return "\nObservações: "+this.getObservacao();
     }
 
+    //takeAway é decidido no método extraInfo() e se "takeAway" for setado falso o pedido sai para entrega
+    //caso contrário ele fica no local
     @Override
     public String entrega(boolean takeAway) {
         if (!this.isTakeAway()) {
@@ -115,6 +122,7 @@ public class Comida implements comum{
         return "\nO pedido será consumido no local.";
     }
 
+    //Estes métodos de ingredientes são sobrescritos nas subclasses
     @Override
     public String emitirIngredientes_1() {
         return null;

@@ -14,27 +14,23 @@ public class Hamburguer extends Comida {
         this.setTipo("Hamburguer");
         this.setTipoHamburguer("BigSkinnyBarra");
         this.setTakeAway(false);
-        this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(19.5);
         return
                 "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
                 "\nTipo de comida: " + this.getTipo() +
                 "\nTipo de hamburguer: " + this.getTipoHamburguer() +
-                "\nComer fora: " + this.getComerFora() +
                 "\nPreco: R$" + this.getPreco();
     }
 
     public String burger2() {
         this.setTipo("Hamburguer");
-        this.setTipoHamburguer("JoanderBurger");
+        this.setTipoHamburguer("Joander'sBurger");
         this.setTakeAway(true);
-        this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(15.2);
         return
                 "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
                 "\nTipo de comida: " + this.getTipo() +
                 "\nTipo de hamburguer: " + this.getTipoHamburguer() +
-                "\nComer fora: " + this.getComerFora() +
                 "\nPreco: R$" + this.getPreco();
     }
 
@@ -42,14 +38,17 @@ public class Hamburguer extends Comida {
         this.setTipo("Hamburguer");
         this.setTipoHamburguer("ChunkyCommunistBurger");
         this.setTakeAway(true);
-        this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
         this.setPreco(22.7);
         return
                 "\nSeu pedido foi concluído com sucesso.\nSTATUS DO PEDIDO\n" +
                 "\nTipo de comida: " + this.getTipo() +
                 "\nTipo de hamburguer: " + this.getTipoHamburguer() +
-                "\nComer fora: " + this.getComerFora() +
                 "\nPreco: R$" + this.getPreco();
+    }
+
+    @Override
+    public String entrega(boolean takeAway) {
+        return super.entrega(takeAway);
     }
 
     @Override
