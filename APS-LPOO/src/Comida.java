@@ -1,18 +1,21 @@
-public class Comida {
-    private String tamanhoPorcao;
-    private boolean takeAway;
+import java.util.Scanner;
+
+public class Comida implements comum{
+    private boolean takeAway = true;
     private double preco;
     private String comerFora;
-
     private String tipo;
+    private String observacao;
+    private String endereco;
+    private String tipoLanche;
 
-    public String getTamanhoPorcao() {
-        return tamanhoPorcao;
-    }
+    public String getEndereco() { return endereco; }
 
-    public void setTamanhoPorcao(String tamanhoPorcao) {
-        this.tamanhoPorcao = tamanhoPorcao;
-    }
+    public void setEndereco(String endereco) { this.endereco = endereco; }
+
+    public String getObservacao() { return observacao; }
+
+    public void setObservacao(String observacao) { this.observacao = observacao; }
 
     public boolean isTakeAway() { return takeAway; }
 
@@ -40,14 +43,6 @@ public class Comida {
 
     public void setTipo(String tipo) { this.tipo = tipo; }
 
-    public void pedido(double preco, boolean takeaway, String porcao, String sabor, String tipo) {
-        this.setPreco(preco);
-        this.setTamanhoPorcao(porcao);
-        this.setTakeAway(takeaway);
-        this.setComerFora(this.isTakeAway() ? "SIM" : "NÃO");
-        this.setTipo(tipo);
-    }
-
     // Pratos da casa.
     public String burger1_() {
         Hamburguer burge1 = new Hamburguer();
@@ -61,7 +56,6 @@ public class Comida {
         Hamburguer burge3 = new Hamburguer();
         return burge3.burger3();
     }
-
     public String caldo1_() {
         Caldo caldo1 = new Caldo();
         return caldo1.caldo1();
@@ -74,7 +68,6 @@ public class Comida {
         Caldo caldo3 = new Caldo();
         return caldo3.caldo3();
     }
-
     public String pizza1_() {
         Pizza pizza1 = new Pizza();
         return pizza1.pizza1();
@@ -88,25 +81,53 @@ public class Comida {
         return pizza3.pizza3();
     }
 
-    public String emitirIngredientes() {
-        return
-                "\nSem informações";
+    @Override
+    public String extraInfo() {
+        Scanner scan = new Scanner(System.in);
+        String obs;
+        System.out.println("Você gostaria de comer no local? [ s - n ]");
+        System.out.print("Resposta: ");
+        this.setComerFora(scan.nextLine());
+        if (this.getComerFora().equalsIgnoreCase("n")) {
+            this.setTakeAway(false);
+            System.out.println("Por favor, informe o seu endereço.");
+            System.out.print("Resposta: ");
+            this.setEndereco(scan.nextLine());
+        }
+        System.out.println("Você gostaria de fazer alguma observação sobre o seu lanche? [ s - n ]");
+        System.out.print("Resposta: ");
+        obs = scan.nextLine();
+        if (obs.equalsIgnoreCase("s") || (obs.equalsIgnoreCase("sim"))){
+            System.out.println("Por favor, digite sua observação:");
+            System.out.print("Resposta: ");
+            this.setObservacao(scan.nextLine());
+        } else {
+            this.setObservacao("Pedido sem observações");
+        }
+        return "\nObservações: "+this.getObservacao();
     }
 
+    @Override
+    public String entrega(boolean takeAway) {
+        if (!this.isTakeAway()) {
+            return "\n\nPedido embalado para entrega, o Motoboy sai para a entrega em alguns minutos." +
+                    "\nO endereço informado para entrega foi: "+ this.getEndereco();
+        }
+        return "\nO pedido será consumido no local.";
+    }
+
+    @Override
     public String emitirIngredientes_1() {
-        return
-                "\nSem informações sobre o burguer 1";
+        return null;
     }
 
+    @Override
     public String emitirIngredientes_2() {
-        return
-                "\nSem informações sobre o burguer 2";
+        return null;
     }
 
+    @Override
     public String emitirIngredientes_3() {
-        return
-                "\nSem informações sobre o burguer 1";
+        return null;
     }
-
-
 }
