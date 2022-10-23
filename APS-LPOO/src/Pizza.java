@@ -9,7 +9,7 @@ public class Pizza extends Comida implements comum{
 
     public String pizza1() {
         this.setTipo("Pizza");
-        this.setSabor("Barra 8 pieces");
+        this.setSabor("Barra 8 Magic Pieces");
         this.setPreco(30.5);
         return
                 "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +
@@ -20,7 +20,7 @@ public class Pizza extends Comida implements comum{
 
     public String pizza2() {
         this.setTipo("Pizza");
-        this.setSabor("Barbas 10 Grand");
+        this.setSabor("Barba's 10 Grand Slices");
         this.setPreco(25.2);
         return
                 "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +

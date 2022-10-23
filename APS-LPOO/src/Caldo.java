@@ -33,7 +33,7 @@ public class Caldo extends Comida implements comum{
 
     public String caldo3() {
         this.setTipo("Caldo");
-        this.setTipoCaldo("Old Village's best");
+        this.setTipoCaldo("Old Village's Best");
         this.setPreco(10);
         return
                 "\nPedido Confirmado.\nObrigado!\n\nSTATUS DO PEDIDO\n" +

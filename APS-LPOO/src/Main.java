@@ -35,7 +35,7 @@ public class Main {
         System.out.println("\n****************************************************************************************************************");
         System.out.println("*                                          DIGITE O NUMERO DO CALDO ESCOLHIDO                                  *");
         System.out.println("*                 1-Best of Barra     2-M. Castelo's Super     3-Old Village's best   4-Desistir               *");
-        System.out.println("*                          R$ 9.50              R$ 25.2                   R$ 10.00                             *");
+        System.out.println("*                      R$ 9.50               R$ 25.2                 R$ 10.00                                  *");
         System.out.println("****************************************************************************************************************\n");
         Scanner scan = new Scanner(System.in);
         System.out.print("Resposta: ");
@@ -45,17 +45,18 @@ public class Main {
 
     public static String menuPizza() {
         String opcao;
-        System.out.println("\n*********************************************************************************************************************");
-        System.out.println("*                                        DIGITE O NUMERO DA PIZZA ESCOLHIDA                                          *");
-        System.out.println("*                1-Barra 8 pieces     2-Barbas 10 Grand     3-The Old Village's 16 Secrets   4-Desistir              *");
-        System.out.println("*                    R$ 30.50              R$ 25.20                  R$ 45.99                                        *");
-        System.out.println("*********************************************************************************************************************\n");
+        System.out.println("\n*************************************************************************************************************************");
+        System.out.println("*                                      DIGITE O NUMERO DA PIZZA ESCOLHIDA                                               *");
+        System.out.println("*       1-Barra 8 Magic Pieces     2-Barba's 10 Grand Slices     3-The Old Village's 16 Secrets   4-Desistir            *");
+        System.out.println("*              R$ 30.50                     R$ 25.20                         R$ 45.99                                   *");
+        System.out.println("*************************************************************************************************************************\n");
         Scanner scan = new Scanner(System.in);
         System.out.print("Resposta: ");
         opcao = scan.nextLine();
         return opcao;
     }
 
+    //Código principal
     public static void codigo() {
         Scanner scan = new Scanner(System.in);
         String opcao;
@@ -65,6 +66,7 @@ public class Main {
                 //Hamburguer
                 case "1":
                     switch (menuHamburguer()) {
+                        //BigSkinnyBarra
                         case "1" -> {
                             Comida burge = new Hamburguer();
                             System.out.println(burge.emitirIngredientes_1());
@@ -76,6 +78,7 @@ public class Main {
                                         burge.emitirIngredientes_1() + burge.entrega(burge.isTakeAway()));
                             }
                         }
+                        //Joander'sBurger
                         case "2" -> {
                             Comida burge2 = new Hamburguer();
                             System.out.println(burge2.emitirIngredientes_2());
@@ -87,6 +90,7 @@ public class Main {
                                         burge2.emitirIngredientes_2() + burge2.entrega(burge2.isTakeAway()));
                             }
                         }
+                        //ChunkyComunistBurger
                         case "3" -> {
                             Comida burge3 = new Hamburguer();
                             System.out.println(burge3.emitirIngredientes_3());
@@ -98,6 +102,7 @@ public class Main {
                                         burge3.emitirIngredientes_3() + burge3.entrega(burge3.isTakeAway()));
                             }
                         }
+                        //Sair do menu
                         case "4" -> System.out.println("Saindo do menu");
                         default -> System.out.println("Número inexistente!");
                     }
@@ -105,6 +110,7 @@ public class Main {
                     //Caldo
                 case "2":
                     switch (menuCaldo()) {
+                        //Best of Barra
                         case "1" -> {
                             Comida caldo = new Caldo();
                             System.out.println(caldo.emitirIngredientes_1());
@@ -116,6 +122,7 @@ public class Main {
                                         caldo.emitirIngredientes_1() + caldo.entrega(caldo.isTakeAway()));
                             }
                         }
+                        //M. Castelo's Super
                         case "2" -> {
                             Comida caldo2 = new Caldo();
                             System.out.println(caldo2.emitirIngredientes_2());
@@ -127,6 +134,7 @@ public class Main {
                                         caldo2.emitirIngredientes_2() + caldo2.entrega(caldo2.isTakeAway()));
                             }
                         }
+                        //Old Village's Best
                         case "3" -> {
                             Comida caldo3 = new Caldo();
                             System.out.println(caldo3.emitirIngredientes_3());
@@ -138,12 +146,15 @@ public class Main {
                                         caldo3.emitirIngredientes_3() + caldo3.entrega(caldo3.isTakeAway()));
                             }
                         }
+                        //Sair do menu
                         case "4" -> System.out.println("Saindo do menu");
                         default -> System.out.println("Número inexistente!");
                     }
                     break;
+                    //Pizza
                 case "3":
                     switch (menuPizza()) {
+                        //Barra 8 Magic Pieces
                         case "1" -> {
                             Comida pizza = new Pizza();
                             System.out.println(pizza.emitirIngredientes_1());
@@ -155,6 +166,7 @@ public class Main {
                                         pizza.emitirIngredientes_1() + pizza.entrega(pizza.isTakeAway()));
                             }
                         }
+                        //Barba's 10 Grand Slices
                         case "2" -> {
                             Comida pizza2 = new Pizza();
                             System.out.println(pizza2.emitirIngredientes_2());
@@ -166,6 +178,7 @@ public class Main {
                                         pizza2.emitirIngredientes_2() + pizza2.entrega(pizza2.isTakeAway()));
                             }
                         }
+                        //The Old Village's 16 Secrets
                         case "3" -> {
                             Comida pizza3 = new Pizza();
                             System.out.println(pizza3.emitirIngredientes_3());
@@ -177,20 +190,25 @@ public class Main {
                                         pizza3.emitirIngredientes_3() + pizza3.entrega(pizza3.isTakeAway()));
                             }
                         }
+                        //Sair do menu
                         case "4" -> System.out.println("Saindo do menu");
                         default -> System.out.println("Número inexistente!");
                     }
                     break;
+                    //Caso o usuário digite um número errado ele acabará aqui
                 default:
                     System.out.println("Número escolhido não existe!");
                     break;
             }
+            //Pergunta para fim do LOOP, usando captura de "opcao"
             System.out.println("\nDeseja fazer outro pedido? [ s - n ]");
             System.out.print("Resposta: ");
             opcao = scan.nextLine();
+            //While é usado para dar fim ao LOOP
         } while (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim"));
     }
 
+    //Em "main", o método código é chamado para o sistema inteiro funcionar.
     public static void main(String[] args) {
         codigo();
     }
