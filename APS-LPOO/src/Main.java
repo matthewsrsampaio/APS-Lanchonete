@@ -74,7 +74,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + burge.burger1_() + burge.extraInfo() +
+                                System.out.println("\n" + burge.burger1() + burge.extraInfo() +
                                         burge.emitirIngredientes_1() + burge.entrega(burge.isTakeAway()));
                             }
                         }
@@ -86,7 +86,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + burge2.burger2_() + burge2.extraInfo() +
+                                System.out.println("\n" + burge2.burger2() + burge2.extraInfo() +
                                         burge2.emitirIngredientes_2() + burge2.entrega(burge2.isTakeAway()));
                             }
                         }
@@ -98,7 +98,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + burge3.burger3_() + burge3.extraInfo() +
+                                System.out.println("\n" + burge3.burger3() + burge3.extraInfo() +
                                         burge3.emitirIngredientes_3() + burge3.entrega(burge3.isTakeAway()));
                             }
                         }
@@ -118,7 +118,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + caldo.caldo1_() + caldo.extraInfo() +
+                                System.out.println("\n" + caldo.caldo1() + caldo.extraInfo() +
                                         caldo.emitirIngredientes_1() + caldo.entrega(caldo.isTakeAway()));
                             }
                         }
@@ -130,7 +130,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + caldo2.caldo2_() + caldo2.extraInfo() +
+                                System.out.println("\n" + caldo2.caldo2() + caldo2.extraInfo() +
                                         caldo2.emitirIngredientes_2() + caldo2.entrega(caldo2.isTakeAway()));
                             }
                         }
@@ -142,7 +142,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + caldo3.caldo3_() + caldo3.extraInfo() +
+                                System.out.println("\n" + caldo3.caldo3() + caldo3.extraInfo() +
                                         caldo3.emitirIngredientes_3() + caldo3.entrega(caldo3.isTakeAway()));
                             }
                         }
@@ -162,7 +162,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + pizza.pizza1_() + pizza.extraInfo() +
+                                System.out.println("\n" + pizza.pizza1() + pizza.extraInfo() +
                                         pizza.emitirIngredientes_1() + pizza.entrega(pizza.isTakeAway()));
                             }
                         }
@@ -174,7 +174,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + pizza2.pizza2_() + pizza2.extraInfo() +
+                                System.out.println("\n" + pizza2.pizza2() + pizza2.extraInfo() +
                                         pizza2.emitirIngredientes_2() + pizza2.entrega(pizza2.isTakeAway()));
                             }
                         }
@@ -186,7 +186,7 @@ public class Main {
                             System.out.print("Resposta: ");
                             opcao = scan.nextLine();
                             if (opcao.equalsIgnoreCase("s") || opcao.equalsIgnoreCase("sim")) {
-                                System.out.println("\n" + pizza3.pizza3_() + pizza3.extraInfo() +
+                                System.out.println("\n" + pizza3.pizza3() + pizza3.extraInfo() +
                                         pizza3.emitirIngredientes_3() + pizza3.entrega(pizza3.isTakeAway()));
                             }
                         }

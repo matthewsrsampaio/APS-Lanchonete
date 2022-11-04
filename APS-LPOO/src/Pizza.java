@@ -1,4 +1,4 @@
-public class Pizza extends Comida implements comum{
+public class Pizza extends Comida {
     private String sabor;
 
     public String getSabor() {
@@ -7,6 +7,7 @@ public class Pizza extends Comida implements comum{
 
     public void setSabor(String sabor) { this.sabor = sabor; }
 
+    @Override
     public String pizza1() {
         this.setTipo("Pizza");
         this.setSabor("Barra 8 Magic Pieces");
@@ -18,6 +19,7 @@ public class Pizza extends Comida implements comum{
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String pizza2() {
         this.setTipo("Pizza");
         this.setSabor("Barba's 10 Grand Slices");
@@ -29,6 +31,7 @@ public class Pizza extends Comida implements comum{
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String pizza3() {
         this.setTipo("Pizza");
         this.setSabor("The Old Village's 16 Secrets");
@@ -57,6 +60,6 @@ public class Pizza extends Comida implements comum{
 
     @Override
     public String emitirIngredientes_3() {
-        return "\nFicha de ingredientes padrão: queijo muçarela 1000 grau, alfafa, carne de carangueijo desfiada, triglicerídeos hipoglicemicos";
+        return "\nFicha de ingredientes padrão: queijo muçarela 1000 grau, alfafa, carne de caranguejo desfiada, triglicerídeos hipoglicemicos";
     }
 }

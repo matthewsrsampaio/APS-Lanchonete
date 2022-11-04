@@ -1,4 +1,4 @@
-public class Caldo extends Comida implements comum{
+public class Caldo extends Comida {
     private String tipoCaldo;
 
     public String getTipoCaldo() {
@@ -9,6 +9,7 @@ public class Caldo extends Comida implements comum{
         this.tipoCaldo = tipoCaldo;
     }
 
+    @Override
     public String caldo1() {
         this.setTipo("Caldo");
         this.setTipoCaldo("Best of Barra");
@@ -20,6 +21,7 @@ public class Caldo extends Comida implements comum{
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String caldo2() {
         this.setTipo("Caldo");
         this.setTipoCaldo("M. Castelo's Super");
@@ -31,6 +33,7 @@ public class Caldo extends Comida implements comum{
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String caldo3() {
         this.setTipo("Caldo");
         this.setTipoCaldo("Old Village's Best");

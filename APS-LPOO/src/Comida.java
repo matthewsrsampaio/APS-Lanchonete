@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //Classe Comida implementa a Interface "comum"
-public class Comida implements comum{
+public abstract class Comida {
     private boolean takeAway = true;
     private double preco;
     private String comerFora;
@@ -20,25 +20,15 @@ public class Comida implements comum{
 
     public boolean isTakeAway() { return takeAway; }
 
-    public void setTakeAway(boolean takeAway) {
-        this.takeAway = takeAway;
-    }
+    public void setTakeAway(boolean takeAway) { this.takeAway = takeAway; }
 
-    public double getPreco() {
-        return preco;
-    }
+    public double getPreco() { return preco; }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
+    public void setPreco(double preco) { this.preco = preco; }
 
-    public String getComerFora() {
-        return comerFora;
-    }
+    public String getComerFora() { return comerFora; }
 
-    public void setComerFora(String comerFora) {
-        this.comerFora = comerFora;
-    }
+    public void setComerFora(String comerFora) { this.comerFora = comerFora; }
 
     public String getTipo() { return tipo; }
 
@@ -46,46 +36,18 @@ public class Comida implements comum{
 
     // Pratos da casa.
     //Instanciado aqui para que se possa usar os métodos de Comida com o objeto.
-    public String burger1_() {
-        Hamburguer burge1 = new Hamburguer();
-        return burge1.burger1();
-    }
-    public String burger2_() {
-        Hamburguer burge2 = new Hamburguer();
-        return burge2.burger2();
-    }
-    public String burger3_() {
-        Hamburguer burge3 = new Hamburguer();
-        return burge3.burger3();
-    }
-    public String caldo1_() {
-        Caldo caldo1 = new Caldo();
-        return caldo1.caldo1();
-    }
-    public String caldo2_() {
-        Caldo caldo2 = new Caldo();
-        return caldo2.caldo2();
-    }
-    public String caldo3_() {
-        Caldo caldo3 = new Caldo();
-        return caldo3.caldo3();
-    }
-    public String pizza1_() {
-        Pizza pizza1 = new Pizza();
-        return pizza1.pizza1();
-    }
-    public String pizza2_() {
-        Pizza pizza2 = new Pizza();
-        return pizza2.pizza2();
-    }
-    public String pizza3_() {
-        Pizza pizza3 = new Pizza();
-        return pizza3.pizza3();
-    }
+    public String burger1() { return null; }
+    public String burger2() { return null; }
+    public String burger3() { return null; }
+    public String caldo1() { return null; }
+    public String caldo2() { return null; }
+    public String caldo3() { return null; }
+    public String pizza1() { return null; }
+    public String pizza2() { return null; }
+    public String pizza3() { return null; }
 
     //extraInfo() coleta informações sobre o pedido como local do consumo,
     // endereço do cliente e observação sobre o pedido
-    @Override
     public String extraInfo() {
         Scanner scan = new Scanner(System.in);
         String obs;
@@ -113,7 +75,6 @@ public class Comida implements comum{
 
     //takeAway é decidido no método extraInfo() e se "takeAway" for setado falso o pedido sai para entrega
     //caso contrário ele fica no local
-    @Override
     public String entrega(boolean takeAway) {
         if (!this.isTakeAway()) {
             return "\n\nPedido embalado para entrega, o Motoboy sai para a entrega em alguns minutos." +
@@ -123,17 +84,14 @@ public class Comida implements comum{
     }
 
     //Estes métodos de ingredientes são sobrescritos nas subclasses
-    @Override
     public String emitirIngredientes_1() {
         return null;
     }
 
-    @Override
     public String emitirIngredientes_2() {
         return null;
     }
 
-    @Override
     public String emitirIngredientes_3() {
         return null;
     }

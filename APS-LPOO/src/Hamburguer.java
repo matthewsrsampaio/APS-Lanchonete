@@ -10,6 +10,7 @@ public class Hamburguer extends Comida {
         this.tipoHamburguer = tipoHamburguer;
     }
 
+    @Override
     public String burger1() {
         this.setTipo("Hamburguer");
         this.setTipoHamburguer("BigSkinnyBarra");
@@ -22,6 +23,7 @@ public class Hamburguer extends Comida {
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String burger2() {
         this.setTipo("Hamburguer");
         this.setTipoHamburguer("Joander'sBurger");
@@ -34,6 +36,7 @@ public class Hamburguer extends Comida {
                 "\nPreco: R$" + this.getPreco();
     }
 
+    @Override
     public String burger3() {
         this.setTipo("Hamburguer");
         this.setTipoHamburguer("ChunkyCommunistBurger");
